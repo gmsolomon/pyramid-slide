@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .mainbody {
+            line-height: 0;
+            font-size: 30px;
+            font-weight: bold;
+            background-color: #C7E3C7;
+            border: 2px solid black;
+            border-radius: 15px;
+            width:750px;
+            align-content: center;
+            align-self: auto;
+            margin-left: auto;
+            margin-right: auto;
+            border-color: black;
+
+        }
+
+        body {
+            font-family: "Courier New", monospace;
+            text-align: center;
+            background-color: lightblue;
+            width: auto;
+        }
+
+        .selectArea {
+            font-family: "Arial";
+            font-size: 20px;
+            background-color: lightgreen;
+            width:750px;
+            height: 50px;
+            line-height: 5px;
+            border-radius: 10px;
+            align-content: center;
+            align-self: auto;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: bold;
+        }
+
+        .mainheader {
+            line-height: 75px;
+            color: white;
+            text-align: center;
+            vertical-align: center;
+            width:750px;
+            height: 70px;
+            border: 2px solid black;
+            background-color: darkblue;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+    </style>
+    <script>
+        function show_value(x){
+            document.getElementById("slider_value").innerHTML=x;
+        }
+    </script>
+</head>
+<body>
+    <h1 class="mainheader">PYRAMID SLIDE</h1>
+    <div class="mainbody">
+    <form id="draw-form">
+        <div class = "selectArea">
+            <br><br>
+        Brick Symbol:
+        <select id="selectedSymbol" onchange="myFunction2()">
+            <option value="#">#</option>
+            <option value ="@">@</option>
+            <option value ="*">*</option>
+            <option value ="%">%</option>
+            <option value ="$">$</option>
+        </select>
+        &nbsp;&nbsp;&nbsp;&nbsp;How High?
+
+        <input  name = "height" type="range" id="height" min="1" max="20" oninput="myFunction()" onchange="show_value(this.value)">
+        <span id="slider_value" style="color:darkblue;"></span>
+    </div>
+
+    </form>
+
+
+    <div id="pyramid" style="color:darkblue;"></div>
+</div>
+
+    <script src="pyramid-slide.js"></script>
+</body>
+</html>
